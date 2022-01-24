@@ -127,7 +127,7 @@ class HexWindow(QMainWindow):
         """
         self._hex_grid_scene = InteractiveGraphicsScene()
         self.ui.hexBoard.setScene(self._hex_grid_scene)
-        self._hex_grid_scene.itemDoubleClicked.connect(self._hexagon_clicked)
+        self._hex_grid_scene.itemClicked.connect(self._hexagon_clicked)
 
         self.ui.currentPlayer.setVisible(True)
         self.ui.currentPlayerColor.setVisible(True)
@@ -181,7 +181,7 @@ class HexWindow(QMainWindow):
 
         if self._game.is_finished():
             winner = str(self._game.get_winner())
-            self.ui.winnerPrompt.setText(f"GAME OVER! {winner} has won!")
+            self.ui.winnerPrompt.setText(f"GAME OVER!\n {winner} has won!")
             self.ui.currentPlayer.setText("")
             color = Qt.black
             self._current_player_color_scene.setBackgroundBrush(QBrush(color))

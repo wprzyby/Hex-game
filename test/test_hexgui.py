@@ -64,7 +64,7 @@ def test_game_screen_make_moves_to_win(qtbot):
     window._hexagon_clicked(window._hex_grid[2][0])
     assert window._game.is_finished() is True
     assert window._game.get_winner().name == 'Player 1'
-    assert window.ui.winnerPrompt.text() == 'GAME OVER! Player 1 has won!'
+    assert window.ui.winnerPrompt.text() == 'GAME OVER!\n Player 1 has won!'
 
 
 def test_restart(qtbot):

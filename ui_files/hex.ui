@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="palette">
@@ -462,7 +462,7 @@
       <item>
        <widget class="QStackedWidget" name="stack">
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page">
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -530,6 +530,9 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="maxLength">
+                   <number>70</number>
+                  </property>
                   <property name="placeholderText">
                    <string>Player 1</string>
                   </property>
@@ -562,6 +565,9 @@
                     <width>250</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="maxLength">
+                   <number>70</number>
                   </property>
                   <property name="placeholderText">
                    <string>Player 2</string>
@@ -624,7 +630,30 @@
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>From 1 to 7</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="setupConfirmButton">
@@ -727,6 +756,12 @@
             </item>
             <item>
              <widget class="QLabel" name="winnerPrompt">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>55</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <pointsize>17</pointsize>

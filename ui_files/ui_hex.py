@@ -19,7 +19,7 @@ class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         if not mainWindow.objectName():
             mainWindow.setObjectName(u"mainWindow")
-        mainWindow.resize(1280, 720)
+        mainWindow.resize(1200, 800)
         palette = QPalette()
         brush = QBrush(QColor(255, 255, 255, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -145,6 +145,7 @@ class Ui_mainWindow(object):
         self.playerOneInputLine = QLineEdit(self.page)
         self.playerOneInputLine.setObjectName(u"playerOneInputLine")
         self.playerOneInputLine.setMinimumSize(QSize(250, 30))
+        self.playerOneInputLine.setMaxLength(70)
 
         self.horizontalLayout_2.addWidget(self.playerOneInputLine)
 
@@ -167,6 +168,7 @@ class Ui_mainWindow(object):
         self.playerTwoInputLine = QLineEdit(self.page)
         self.playerTwoInputLine.setObjectName(u"playerTwoInputLine")
         self.playerTwoInputLine.setMinimumSize(QSize(250, 30))
+        self.playerTwoInputLine.setMaxLength(70)
 
         self.horizontalLayout_3.addWidget(self.playerTwoInputLine)
 
@@ -208,8 +210,18 @@ class Ui_mainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.boardRadiusInput)
 
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_2)
+
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_5)
+
+        self.label_6 = QLabel(self.page)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.verticalLayout_3.addWidget(self.label_6)
 
         self.setupConfirmButton = QPushButton(self.page)
         self.setupConfirmButton.setObjectName(u"setupConfirmButton")
@@ -261,6 +273,7 @@ class Ui_mainWindow(object):
 
         self.winnerPrompt = QLabel(self.page_2)
         self.winnerPrompt.setObjectName(u"winnerPrompt")
+        self.winnerPrompt.setMinimumSize(QSize(0, 55))
         font4 = QFont()
         font4.setPointSize(17)
         self.winnerPrompt.setFont(font4)
@@ -310,7 +323,7 @@ class Ui_mainWindow(object):
 
         self.retranslateUi(mainWindow)
 
-        self.stack.setCurrentIndex(1)
+        self.stack.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(mainWindow)
@@ -325,6 +338,7 @@ class Ui_mainWindow(object):
         self.playerTwoInputLine.setPlaceholderText(QCoreApplication.translate("mainWindow", u"Player 2", None))
         self.label_3.setText(QCoreApplication.translate("mainWindow", u"First to move", None))
         self.label_4.setText(QCoreApplication.translate("mainWindow", u"Board radius:", None))
+        self.label_6.setText(QCoreApplication.translate("mainWindow", u"From 1 to 7", None))
         self.setupConfirmButton.setText(QCoreApplication.translate("mainWindow", u"START GAME", None))
         self.currentPlayer.setText("")
         self.winnerPrompt.setText("")
