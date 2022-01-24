@@ -24,8 +24,8 @@ class HexagonItem(QGraphicsPolygonItem):
 
     Methods
     --------
-    mouseDoubleClickEvent()
-        sets the double click to emit a signal
+    mousePressEvent()
+        sets the mouse click to emit a signal
     hoverEnterEvent()
         sets mouse hover-over to enlarge the item slightly
     hoverLeaveEvent()
@@ -90,7 +90,7 @@ class HexagonItem(QGraphicsPolygonItem):
 
 class InteractiveGraphicsScene(QGraphicsScene):
     """
-    a scene whose items can emit a signal throgh it when doubleclicked
+    a scene whose items can emit a signal throgh it when clicked
     """
     itemClicked = Signal(object)
 

@@ -19,7 +19,7 @@ class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         if not mainWindow.objectName():
             mainWindow.setObjectName(u"mainWindow")
-        mainWindow.resize(1280, 720)
+        mainWindow.resize(1200, 800)
         palette = QPalette()
         brush = QBrush(QColor(255, 255, 255, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -145,6 +145,7 @@ class Ui_mainWindow(object):
         self.playerOneInputLine = QLineEdit(self.page)
         self.playerOneInputLine.setObjectName(u"playerOneInputLine")
         self.playerOneInputLine.setMinimumSize(QSize(250, 30))
+        self.playerOneInputLine.setMaxLength(70)
 
         self.horizontalLayout_2.addWidget(self.playerOneInputLine)
 
@@ -167,6 +168,7 @@ class Ui_mainWindow(object):
         self.playerTwoInputLine = QLineEdit(self.page)
         self.playerTwoInputLine.setObjectName(u"playerTwoInputLine")
         self.playerTwoInputLine.setMinimumSize(QSize(250, 30))
+        self.playerTwoInputLine.setMaxLength(70)
 
         self.horizontalLayout_3.addWidget(self.playerTwoInputLine)
 
@@ -240,7 +242,6 @@ class Ui_mainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.currentPlayer = QLabel(self.page_2)
         self.currentPlayer.setObjectName(u"currentPlayer")
-        self.currentPlayer.setMaximumSize(QSize(1200, 35))
         self.currentPlayer.setFont(font3)
         self.currentPlayer.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
@@ -272,7 +273,7 @@ class Ui_mainWindow(object):
 
         self.winnerPrompt = QLabel(self.page_2)
         self.winnerPrompt.setObjectName(u"winnerPrompt")
-        self.winnerPrompt.setMaximumSize(QSize(1250, 70))
+        self.winnerPrompt.setMinimumSize(QSize(0, 55))
         font4 = QFont()
         font4.setPointSize(17)
         self.winnerPrompt.setFont(font4)

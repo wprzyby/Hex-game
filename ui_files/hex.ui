@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="palette">
@@ -530,6 +530,9 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="maxLength">
+                   <number>70</number>
+                  </property>
                   <property name="placeholderText">
                    <string>Player 1</string>
                   </property>
@@ -562,6 +565,9 @@
                     <width>250</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="maxLength">
+                   <number>70</number>
                   </property>
                   <property name="placeholderText">
                    <string>Player 2</string>
@@ -671,12 +677,6 @@
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
                <widget class="QLabel" name="currentPlayer">
-                <property name="maximumSize">
-                 <size>
-                  <width>1200</width>
-                  <height>35</height>
-                 </size>
-                </property>
                 <property name="font">
                  <font>
                   <pointsize>14</pointsize>
@@ -756,10 +756,10 @@
             </item>
             <item>
              <widget class="QLabel" name="winnerPrompt">
-              <property name="maximumSize">
+              <property name="minimumSize">
                <size>
-                <width>1250</width>
-                <height>70</height>
+                <width>0</width>
+                <height>55</height>
                </size>
               </property>
               <property name="font">
