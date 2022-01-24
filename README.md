@@ -4,7 +4,6 @@
 An implementation of Hex game for a programming basics course project at Warsaw University of Technology.
 
 ## State of the project
-### Branch dev
 Fully functional GUI with setup screen allowing to choose board radius and player names. Contains documentation and pytest unit tests. Files with .ui extension are generated via qt-designer and ui_*.py files generated using pyside2-uic tool.
 
 ## Prerequisites
