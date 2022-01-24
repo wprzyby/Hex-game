@@ -75,8 +75,8 @@ class HexagonItem(QGraphicsPolygonItem):
         scene.addItem(self)
         self.setAcceptHoverEvents(True)
 
-    def mouseDoubleClickEvent(self, event):
-        self.scene().itemDoubleClicked.emit(self)
+    def mousePressEvent(self, event):
+        self.scene().itemClicked.emit(self)
 
     def hoverEnterEvent(self, event):
         self.setScale(1.05)
@@ -92,7 +92,7 @@ class InteractiveGraphicsScene(QGraphicsScene):
     """
     a scene whose items can emit a signal throgh it when doubleclicked
     """
-    itemDoubleClicked = Signal(object)
+    itemClicked = Signal(object)
 
 
 class ErrorDialog(QDialog):

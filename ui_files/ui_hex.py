@@ -208,8 +208,18 @@ class Ui_mainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.boardRadiusInput)
 
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_5.addItem(self.horizontalSpacer_2)
+
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_5)
+
+        self.label_6 = QLabel(self.page)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.verticalLayout_3.addWidget(self.label_6)
 
         self.setupConfirmButton = QPushButton(self.page)
         self.setupConfirmButton.setObjectName(u"setupConfirmButton")
@@ -230,6 +240,7 @@ class Ui_mainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.currentPlayer = QLabel(self.page_2)
         self.currentPlayer.setObjectName(u"currentPlayer")
+        self.currentPlayer.setMaximumSize(QSize(1200, 35))
         self.currentPlayer.setFont(font3)
         self.currentPlayer.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
@@ -261,6 +272,7 @@ class Ui_mainWindow(object):
 
         self.winnerPrompt = QLabel(self.page_2)
         self.winnerPrompt.setObjectName(u"winnerPrompt")
+        self.winnerPrompt.setMaximumSize(QSize(1250, 70))
         font4 = QFont()
         font4.setPointSize(17)
         self.winnerPrompt.setFont(font4)
@@ -310,7 +322,7 @@ class Ui_mainWindow(object):
 
         self.retranslateUi(mainWindow)
 
-        self.stack.setCurrentIndex(1)
+        self.stack.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(mainWindow)
@@ -325,6 +337,7 @@ class Ui_mainWindow(object):
         self.playerTwoInputLine.setPlaceholderText(QCoreApplication.translate("mainWindow", u"Player 2", None))
         self.label_3.setText(QCoreApplication.translate("mainWindow", u"First to move", None))
         self.label_4.setText(QCoreApplication.translate("mainWindow", u"Board radius:", None))
+        self.label_6.setText(QCoreApplication.translate("mainWindow", u"From 1 to 7", None))
         self.setupConfirmButton.setText(QCoreApplication.translate("mainWindow", u"START GAME", None))
         self.currentPlayer.setText("")
         self.winnerPrompt.setText("")
